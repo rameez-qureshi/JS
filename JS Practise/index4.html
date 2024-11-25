@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT</title>
+  </head>
+  <body>
+    <div>       <!-- in this div internal javascript is written -->
+      <p id="demo">dfghjki</p>
+      <button id="btn" onclick="document.getElementById('demo').innerHTML='HELLO WORLD'">PRESS</button>
+    </div>
+    <div>       <!-- in this div external javascript is written by given function name -->
+        <p id="demo1">dfghjki</p>
+        <button id="btn" onclick="paraChange()">PRESS</button>
+    </div>
+    <br>
+    <div>
+        <button type="button" onclick="document.write(50+10)">Click here to remove all and ans of 50 + 10</button>
+    </div>
+    <br>
+    <div>
+        <p id="mathans">50 + 10</p>
+        <button type="button" onclick="document.getElementById('mathans').innerHTML = 50 + 10 ">GO</button>
+    </div>
+    <br>
+    <div>
+        <p>ALERT OF VIRUS</p>
+        <button type="button" onclick="window.alert('VIRUS DETECTED') ">ALERT BUTTON</button>
+    </div>
+    <br>
+    <div>
+        <p>CLICK FOR PRINT WINDOW</p>
+        <button type="button" onclick="window.print()">CLICK HERE</button>
+    </div>
+
+    <!-- javaScript can "display" data in different ways:
+        Writing into an HTML element, using innerHTML
+        Writing into the HTML output using document.write().
+        Writing into an alert box, using window.alert().
+        Writing into the browser console, using console.log().
+        to open the print window in browser, using window.print(). -->
+
+
+
+
+    <script>
+
+      function paraChange(){
+        document.getElementById('demo1').innerHTML='HELLO WORLD';
+      }
+    </script>
+  </body>
+</html>

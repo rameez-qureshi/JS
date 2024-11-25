@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeOut</title>
+  </head>
+  <body>
+    <h1>setTimeout</h1>
+    <h3>MEANS to do any function 1 time after given time</h3>
+
+    <h4 id="text">This text change by setTimeOut() after 8 seconds :-</h4>
+    <input type="text" id="txt" />
+
+    <h4>
+      Unlimited Counter - readonly (means dont write anything in box like 1st
+      one.)
+    </h4>
+
+    <input type="text" id="demo" readonly />
+
+    <h2>Clock :-</h2>
+    <p id="clock"></p>
+
+    <script>
+      //change any text
+      let showPara = () => {
+        setTimeout(() => {
+          document.getElementById("text").innerHTML =
+            "1 to 20 seconds counter by setTimeOut()";
+        }, 8000);
+      };
+      showPara();
+
+      //counter with loop
+      for (let i = 1; i <= 20; i++) {
+        setTimeout(() => {
+          document.getElementById("txt").value = `${i} second`;
+        }, i * 1000);
+      }
+
+      //counter without loop
+      let counter = 0;
+      function timedCount() {
+        document.getElementById("demo").value = `${counter} second`;
+        counter++;
+        let timeout = setTimeout(timedCount, 1000);
+      }
+      timedCount();
+
+      //clock
+      function startTime() {
+        const date = new Date();
+        document.getElementById("clock").innerHTML = date.toLocaleTimeString();
+        setTimeout(function () {
+          startTime();
+        }, 1000);
+      };
+      startTime();
+    </script>
+  </body>
+</html>

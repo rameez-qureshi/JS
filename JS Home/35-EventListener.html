@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- addEventListener - removeEventListener -->
+
+    <div>
+        <button id="btn">Click Me</button>
+    </div>
+
+    <script>
+        // EVENTS LISTENER
+        let y = function(event) {
+        console.log(event.target)
+        console.log(event.type, event.clientX, event.clientY)
+        alert("Hello World1!")
+        }
+
+        let z = function(e) {
+        console.log(e)
+        alert("Hello World2!")
+        }
+
+        btn.addEventListener('click', y)
+        // btn.addEventListener('click', z)
+
+        // let a = prompt("What is your favorite number?");
+
+        // if (a == "2") {
+        //   btn.removeEventListener('click', y)
+        // }
+    </script>
+</body>
+</html>

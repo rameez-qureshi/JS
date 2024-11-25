@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    OPEN CONSOLE
+    <script>
+      try {
+        let age = 180;
+        if (age > 110) {
+          throw new ReferenceError("This is probably not true");                   // custom Reference error
+          // throw new SyntaxError                        // there are many types of error you want to throw
+        }
+      } catch (error) {
+        console.log(error.name);                // Reference error
+        console.log(error.message);
+        console.log(error.stack);
+      }
+
+      console.log("The script is still running");
+    </script>
+  </body>
+</html>

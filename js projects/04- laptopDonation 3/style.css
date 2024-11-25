@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+
+.headings{
+    padding: 20px;
+}
+#Actualprice {
+}
+#Collectedprice {
+}
+
+#progresscontainer {
+  background: #858585;
+  height: 50px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#progressbar {
+  background: #48ff00;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#remainprogressbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Collectedpercentage{
+}
+#Remainingpercentage{
+}

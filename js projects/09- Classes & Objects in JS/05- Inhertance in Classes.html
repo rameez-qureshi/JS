@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in Classes</title>
+</head>
+<body>
+    <h2>Inheritance in Classes</h2>
+    <h3>Child Class extends Parent Class means child use parent class properties & functions its called INHERITANCE</h3>
+    <h3>IF child and parent have same method - then child method will be use its called "METHOD OVERRIDING"</h3>
+    <p>Open Console</p>
+    
+    <script>
+
+        class Parent{
+            constructor(name) {
+                this.name = name
+                console.log("This is parent class constructor")
+            }
+            hello(){
+                console.log("HELLO");
+            }
+        }
+
+        class Child extends Parent{
+            constructor(name, branch) {
+                // super();             // invoke parent class constructor here - otherwise this constructor give error.
+                super(name);       // we again invoke parent constructor
+                this.branch = branch;
+                console.log("This is child class constructor")
+            }
+            student(){
+                super.hello();              // invoke parent class hello function here.
+                console.log("hello school");
+            }
+        }
+
+        const obj = new Child("rameez", "FederalSchool");
+
+        console.log(obj);
+        console.log(obj.hello());
+
+        
+        console.log(obj.student());
+
+    </script>
+</body>
+</html>

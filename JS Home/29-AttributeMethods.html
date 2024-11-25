@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Methods</title>
+</head>
+<body>
+    <div id="first" class="hey" data-game="mario" data-player="coding" >Heeeeellllllo</div>
+    <script>
+        let x = document.getElementById("first");
+        console.log(first.attributes)                        // print all attributes
+        console.log(x.getAttribute("class"))                 // print value of class attribute
+        console.log(x.hasAttribute("class"))                 // print true or false (attribute present or not)
+        console.log(x.hasAttribute("style"))     
+        console.log(x.setAttribute("hidden", "true"))                  // add attribute key and value 
+        // console.log(x.setAttribute("class", "true sachin"))         // add attribute key and value ( class = "true sachin" ) like this in tag
+        // console.log(x.removeAttribute("class"))                     // remove attribute
+
+        // console.log(x.dataset)              // print all custom attributes
+        // console.log(x.dataset.game)         // print custom attribute who i made (game)
+        // console.log(x.dataset.player)
+
+        // custom attribute always made with data name ( eg: data-game, data-player )
+        
+    </script>
+</body>
+</html>

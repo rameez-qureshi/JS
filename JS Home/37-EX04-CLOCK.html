@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX04-CLOCK</title>
+</head>
+<body>
+
+    <div><h1 id="Clock"></h1></div>
+
+    <script>
+
+        // let a = new Date();
+        // let d = a.getDay()
+        // let h = a.getHours()
+        // let m = a.getMinutes()
+        // let s = a.getSeconds()
+        // console.log( d,h,m,s)
+        
+        setInterval(()=>{
+            let a = new Date();
+            let d = a.getDay();
+            let h = a.getHours();
+            let m = a.getMinutes();
+            let s = a.getSeconds();
+            document.getElementById('Clock').innerHTML = h +":"+ m +":"+ s +" - Date: "+ d ;
+            }, 1000)
+    </script>
+    
+</body>
+</html>

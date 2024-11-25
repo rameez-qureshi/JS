@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes in JS</title>
+</head>
+<body>
+    <h2>Classes in JS</h2>
+    <h3>Class is a program code use for creating objects.</h3>
+    <p>Open Console</p>
+
+    <script>
+        class ToyotaCar {
+            start() {
+                console.log("Start the car");
+            }
+            stop() {
+                console.log("stop the car");
+            }
+            setbrand(brand){
+                this.brandname = brand;
+                console.log(this.brandname);
+            }
+        }
+
+        let FortunerObj = new ToyotaCar();      // create obj in which we use all ToyotaCar properties & functions.
+
+        console.log(FortunerObj);
+        FortunerObj.setbrand("Fortuner");
+        console.log(FortunerObj.start());
+        console.log(FortunerObj.setbrand("Fortuner"));
+
+        let LexusObj = new ToyotaCar(); 
+        console.log(LexusObj);
+        LexusObj.setbrand("Lexus");
+
+    </script>
+
+</body>
+</html>

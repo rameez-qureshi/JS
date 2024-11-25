@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Window Object - Dom - Bom</h1>
+    <p>window contain all default element like alert, clear, consolelog etc ..... Goto Console in browser and check </p>
+    <p>DOM - Document Object Module</p>
+    <p>BOM - Browser Object Module - alert, prompt, confirm is a part of BOM</p>
+    <script>                // both works same
+        // console.log(window)             // window object(Global Obj) print in console go to browser and check
+        window.console.log(window)         // window contain all default methods like alert, consolelog etc
+
+        // console.log(document)           // document is  an object
+        console.log(window.document)
+        console.log(document.body)
+        document.body.style.background = "red";
+
+        // location.href = "http://www.google.com"   // this is a part of BOM - redirect to google
+    </script>
+</body>
+</html>

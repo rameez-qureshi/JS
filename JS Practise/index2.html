@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text.length;
+        let charat = text.charAt(2);
+        let aat = text.at(4);
+        let txt = text[0];
+        document.getElementById('demo').innerHTML= "Length of String is measured by \"String.length\" method -- " + length;
+        document.getElementById('demo1').innerHTML= "Call any alphabet of string by \"String.charAt\" method -- " + charat;
+        document.getElementById('demo2').innerHTML= "Call any alphabet of string by \"String.at\" method -- " + aat;
+        document.getElementById('demo3').innerHTML= "Call any alphabet of string by \"String.[index]\" method -- " + txt;
+
+        // \b	Backspace :  \f	Form Feed :  \n	New Line :  \r Carriage Return :  \t Horizontal Tabulator :  \v	Vertical Tabulator
+
+        let y = new String("John");                                  // this is not an string this is an object
+        document.getElementById('demo4').innerHTML= "Make an object by using new keyword and the type is -- " + typeof y;
+
+    </script>
+</body>
+</html>

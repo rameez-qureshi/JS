@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="text1">This is an element 1 <span id="span1">Span1 </span> </div>
+    <div class="box" id="text2">This is an element 2 </div>
+  <script>
+    let text1 = document.getElementById("text1")
+    let span1 = document.getElementById("span1")
+    
+    console.log(text1)
+    console.log(text1.matches(".class")) //false  // check id text1 is match with .class in CSS - answer is in ( True or False ) in browser console
+    console.log(text1.matches(".box"))   //true
+    console.log(span1.closest("#span1"))          // check id span1 is close to #span1 in CSS - answer is in ( True or False ) in browser console
+    console.log(text1.contains(span1))   //true   // check id text1 contain #span1 in CSS - answer is in ( True or False ) in browser console
+    console.log(span1.contains(span1))   // true
+    console.log(span1.contains(text1))   // false
+  </script>
+</body>
+</html>

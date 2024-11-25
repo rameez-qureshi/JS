@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="first">first</div>
+        <div class="second">second</div>
+      </div>
+    <script>
+        document.title = "Hello"                  // for changes in title in html page
+        document.head                             // for changes in head tag in HTML
+        document.body                             // for changes in body tag in HTML
+        document.documentElement                  // for changes in any html tag (div, nav etc)
+
+        document.body.firstChild                  // first child of body
+        document.body.lastChild                   // last child of body
+        document.body.childNodes                  // All child of body
+
+        console.log(document.body.childNodes)                // this can print all child tags in console in browser
+        console.log(Array.from(document.body.childNodes))    // this can convert html tag collection to an ARRAY
+
+        a = document.body.firstChild
+        console.log(a.parentNode)         // this can print all things(document)           // print parent element of firstchlid of body
+        console.log(a.parentElement)      // this can print only html tag                   // print parent element of firstchlid of body                  
+        console.log(document.body.firstChild.nextSibling)    // print sibling of body's firstchild 
+    </script>
+</body>
+</html>

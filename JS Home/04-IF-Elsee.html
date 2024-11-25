@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_JAVASCRIPT</title>
+  </head>
+  <body>
+    <script>
+
+      let a = prompt("Please enter your age", "00"); 
+
+      // let a = "23";
+      console.log(typeof a);
+
+      a = Number.parseInt(a); // Converting the String to a Number
+
+      console.log(typeof a);
+      console.log(a);
+      console.log("");
+
+      if (a <= 0) {
+        alert("This is an invalid age");
+      } else if (a < 12) {
+        alert("You are a kid and you cannot even think of driving");
+      } else if (a >= 12 && a < 18) {
+        alert("You cannot drive, think of driving after 18");
+      } else {
+        alert("You can now drive as you are above 18");
+      }
+      alert("Done");
+
+      // This is TERNARY OPERATORS - work like if else but in only on line.
+      console.log("You can", a < 18 ? "Not drive" : "drive");          // print on chrome console
+
+    </script>
+  </body>
+</html>

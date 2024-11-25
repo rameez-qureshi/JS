@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <h1>Promises</h1>
+    <h3>This is used to avoid callback hell problem.</h3>
+    <p>
+      before promise print it state is pending when promise print data after 4s,
+      it state is fullfilled.
+    </p>
+    <p>
+      I write resolve in promise so after 4s it give success BUT if i write
+      reject so after 4s it give error
+    </p>
+    <p>Open Console</p>
+
+    <script>
+      //   const p1 = () => {
+      //     return new Promise((resolve, reject) => {
+      //       console.log("Promise 1 is created");
+      //       resolve("success");
+      //     });
+      //   };
+      //   let pro1 = p1();
+      //   pro1.then((res) => {
+      //     // res means result - it print resolve messege.
+      //     console.log("pro1 is fullfilled", res);
+      //   });
+      //   console.log("");
+
+      const p2 = (dataid) => {
+        // 2s
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Data = ", dataid);
+            resolve("success");
+          }, 3000);
+        });
+      };
+
+      //Promise Callbak Hell
+      //   console.log("fetching data1...");
+      //   p2(1).then((res) => {                      // this is also callback hell
+      //     console.log("fetching data2...");         // we further do it using promise chaining
+      //     p2(2).then((res) => {
+      //       console.log("fetching data3...");
+      //       p2(3).then((res) => {
+      //         console.log("fetching data4...");
+      //         p2(4);
+      //       });
+      //     });
+      //   });
+
+      // Promise Chaining
+      console.log("fetching data10...");                       // this is also complicated
+      p2(10).then((res) => {                           // now we code through async await to make it more easier
+        console.log("fetching data20...");
+        return p2(20);
+      }).then((res) => {
+        console.log("fetching data30...");
+        return p2(30);
+      }).then((res) => {
+        console.log(res);
+      });
+    </script>
+  </body>
+</html>

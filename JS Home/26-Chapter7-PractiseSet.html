@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Hello 1</li>
+        <li>Hello 2</li>
+        <li>Hello 3</li>
+        <li>Hello 4</li>
+        <li>Hello 5</li>
+    </ul>
+    <script>                                                                         // change all li background to cyan
+
+        let a = document.getElementsByTagName("li")
+        Array.from(a).forEach((index) =>{                 // use for each loop 
+        index.style.background = "cyan";                  // use Array.from bcz foreach loop is a array method
+    })                                       // loop runs when body of loops are not apply to all indexex
+
+    // document.getElementsByTagName("li")[0].style.background = "red"
+    // document.getElementsByTagName("li")[1].style.background = "red"
+    // document.getElementsByTagName("li")[2].style.background = "red"           // MANUAL METHOD - not for many li's
+    // document.getElementsByTagName("li")[3].style.background = "red"
+    // document.getElementsByTagName("li")[4].style.background = "red"
+    </script>
+</body>
+</html>

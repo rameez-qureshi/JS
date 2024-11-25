@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner-Outer-HTML</title>
+</head>
+<body>HEEO
+    <p id="first" hidden>Hello <span>buddies,</span> How are you</p>
+    <p id="second">Hellau</p>
+    <script>
+        let x = document.getElementsByTagName('span')[0]
+        console.log(x)                                        // print span tag
+        console.dir(x)                                        // print span as object
+        
+        console.log(document.body.firstChild.nodeName) 
+        console.log(document.body.firstElementChild.nodeName)
+
+        // innerHTML is valid only for element nodes .. for other use nodeValue or data
+
+        let y = document.getElementById('first')
+        console.log(y.innerHTML)                                 // print ID first tag ( inner part )
+        console.log(y.innerHTML = "<p> Hii guyz</p>")            // replace text to ID first
+
+        let z = document.getElementById('second')
+        console.log(z.outerHTML)                                         // print full ID second tag with attributes
+        console.log(z.outerHTML = "<div>Hiiguyzzzzzzzzzzzzzz</div>")      // replace text to ID second
+
+        console.log(document.body.firstChild.data) 
+        console.log(document.body.firstChild.nodeValue) 
+        console.log(document.body.textContent)                 // view full code of this page in browser page
+        
+        first.hidden = false
+
+    </script>
+</body>
+</html>

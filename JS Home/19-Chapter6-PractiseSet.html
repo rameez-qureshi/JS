@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Q1 - Enter age check drive or not</h3>
+    <h3>Q2 - Enter age check drive or not - again & again</h3>
+    <h3>Q3 - Enter age check drive or not - again & again - age less than and equals to 0 give error</h3>
+    <h3>Q4 - If user enter num greater than 4 then redirect to google</h3>
+    <h3>Q5 - Change the background color acc to user input</h3>
+    <script>
+        // CHAPTER 06 - QUESTION 01                             // enter age check drive or not
+        // let age = prompt("Enter your Age to know you drive or not");
+        // age = Number.parseInt(age)
+        const canDrive = (age) => {         // make drive function
+            return age>=18?true:false       // using ternary operator
+        }
+        // if ( canDrive(age) ){
+        //     alert("You can drive")
+        // }
+        // else{
+        //     alert("You cannot drive")
+        // }
+
+        
+        // CHAPTER 06 - QUESTION 02                             // enter age check drive or not - again & again
+        // let runAgain;
+        // do{
+        // let age = prompt("Enter your Age to know you drive or not");
+        // age = Number.parseInt(age)
+        // if ( canDrive(age) ){
+        //     alert("You can drive")
+        // }
+        // else{
+        //     alert("You cannot drive")
+        // }
+        // runAgain = confirm("Do you want to play again")
+        // }while(runAgain)
+
+        // CHAPTER 06 - QUESTION 03                             // enter age check drive or not - again & again - age < 0 give error
+        // let doAgain;
+        // do{
+        // let age = prompt("Enter your Age to know you drive or not");
+        // age = Number.parseInt(age)
+        // if ( age <= 0 ){
+        //     alert("AGE IS NOT VALID")
+        //     break;
+        // }
+        // else if ( canDrive(age) ){
+        //     alert("You can drive")
+        // }
+        // else{
+        //     alert("You cannot drive")
+        // }
+        // doAgain = confirm("Do you want to play again")
+        // }while(doAgain)
+
+        // CHAPTER 06 - QUESTION 04                                       //  If user enter num > 4 then redirect to google
+        // let num = prompt("Enter a num - if num <= 4 redirect to google")
+        // num = Number.parseInt(num)
+        // if ( num > 4 ){
+        //     location.href = "http://www.google.com"
+        // }
+        // else{
+        //     alert("your number is " + num )
+        // }
+        
+        // CHAPTER 06 - QUESTION 05                              // change the background color acc to user input
+        let color = prompt("Enter background Color")
+        document.body.style.background = color
+
+    </script>
+</body>
+</html>

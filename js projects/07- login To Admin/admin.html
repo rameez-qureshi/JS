@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p id="wrong"></p>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="rameez.__q" required/>
+
+      <label for="password">Password:</label>
+      <input type="text" id="password" placeholder="-" required/>
+
+      <button id="submit">SUBMIT</button>
+    </div>
+    <script>
+      let submit = document.getElementById("submit");
+
+      submit.addEventListener("click", function () {
+        let userName = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        let userNameValue = "rameez.__q";
+        let passwordValue = "rameez123@$";
+
+        if (userName === userNameValue && password === passwordValue) {
+          window.location.href = "adminpanel.html";
+        } else {
+          document.querySelector("#wrong").innerHTML = "Wrong Credentials";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOutInterval</title>
+</head>
+<body>
+    <p>TimeOut - Kuch time baad execute ho js</p>
+    <p>TimeInterval - period of time execute ho bar bar</p>
+    <p>Wait 3 sec for alert by setTimeout method</p>
+    <p>Every 6 sec alert occur by setInterval method</p>
+
+    <script>
+        // S E T  T I M E  O U T
+        
+        setTimeout( function(){alert("3 sec is over")} , 3000)    // setTimeout ( function , time in millisec )
+
+        let a = setTimeout( function(){alert("5 sec is over")} , 5000)
+
+        console.log(a)        // print 2 in console - 2 is TIMER ID
+        clearTimeout(a)     // alert not happen after 5 sec - cancel execution 
+
+        // LOOP OF SETTIMER IS RUN OR NOT
+        // let b = prompt("Do you want to run the settimout?")
+        // if ("n" == b) {
+        //   clearTimeout(a)
+        // }
+        // console.log(a)
+
+        // SetTimeOut WHOLE FUNCTION
+        const sum = (a, b, c) => {
+          console.log("Yes I am running " + (a + b + c))
+          a + b
+        }
+        setTimeout(sum, 5000, 1, 2, 7)  // ( function , delaytime , args1 , args2 , args3 )  // function arguments in last
+        // result after 8 sec in console
+
+        // S E T  T I M E  I N T E R V A L
+
+        setInterval(function() {        // setInterval ( function , time in millisec ) - same as setTimeout
+          alert("ALERT IN EVERY 6 SEC by setInterval method ")
+        }, 6000)                        //  alert in every 6 sec 
+
+    </script>
+</body>
+</html>

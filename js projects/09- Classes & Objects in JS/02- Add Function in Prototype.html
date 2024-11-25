@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Function in Object Prototype</title>
+  </head>
+  <body>
+    <h2>Add Function in Object Prototype.</h2>
+    <p>Open Console</p>
+    <h3>obj2.__proto__ = obj1;  ----  now we use obj1 function in obj2</h3>
+
+    <script>
+
+      const Employee = {
+        calcTax() {
+            console.log("Tax rate is 10% = " , (10/100) * this.Salary);
+        }
+      };
+
+      const Affan = {
+        Salary : 55000,
+      };
+
+      const Aziz = {
+        Salary : 78000,
+        calcTax() {
+            console.log("Tax rate is 20% = " , (20/100) * this.Salary);   // if same function in obj and its prototype
+        }                                                                 // - so obj use its own function                                                              
+      };
+
+      Affan.__proto__ = Employee;          // add EMPLOYEE functions in AFFAN OBJECT
+      Aziz.__proto__ = Employee;           // add EMPLOYEE functions in AZIZ OBJECT
+
+      console.log(Affan);                    // {Salary: 50000}
+      console.log(Affan.calcTax());          // Tax rate is 10% =  5000
+      console.log(Aziz.calcTax());           // Tax rate is 20% =  15600
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InserAdjacentHtml</title>
+</head>
+<body>
+    <!-- insertAdjacentHTML, insertAdjacentElement and insertAdjacentText  -->
+
+    <div id="first">Hey I am first</div>
+    <script>
+        let x = document.getElementById('first')
+        x.insertAdjacentHTML('beforebegin', '<div class="test">add beforebegin outside</div>');
+        x.insertAdjacentHTML('beforeend', '<div class="test">add beforeend</div>');
+        x.insertAdjacentHTML('afterbegin', '<div class="test">add afterbegin</div>');
+        x.insertAdjacentHTML('afterend', '<div class="test">add afterend outside</div>');
+        //x.remove()
+
+        //x.insertAdjacentElement
+        //x.insertAdjacentText
+    </script>
+</body>
+</html>

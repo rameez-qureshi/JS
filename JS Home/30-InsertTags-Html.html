@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsertTagsInHtml</title>
+  </head>
+  <body>
+
+    I am start of this container (outer)
+    <div class="container">
+      I am start of this container (inner)
+      <div id="first">I am the first element</div>
+      I am end of this container (inner)
+    </div>
+    I am end of this container (outer)
+
+    <script>
+        let a = document.getElementsByTagName("div")[0];
+        // a.innerHTML = "<h3>START</h3>" + a.innerHTML + "<h3>END</h3><span>This add by JS</span>";
+
+
+        let x = document.createElement('div');
+        x.innerHTML = '<h5>Hello World!</h5>';
+
+        // add new div in HTML under div.container
+        // a.appendChild(x)                                // append in end of div          
+        // a.prepend(x);                                // insert at the beginnind
+        // a.before(x);                                 // insert before the div - outside
+        // a.after(x);                                  // insert after the div - outside
+         a.replaceWith(x);                            // replace div.container with new div
+    </script>
+  </body>
+</html>

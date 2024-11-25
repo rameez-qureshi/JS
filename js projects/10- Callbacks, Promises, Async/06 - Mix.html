@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mix</title>
+  </head>
+  <body>
+    <h1>MIX</h1>
+    <p>Open Console</p>
+    <h3>Callbacks, Promises & Async Await</h3>
+
+    <h4>IF we use async await so not use .then .catch -</h4>
+    <h4>And if we use .then .catch so not use async await -</h4>
+
+    <script>
+
+      const getData = (dataid) => {
+        // 2s
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Data = ", dataid);
+            resolve("success");
+          }, 2000);
+        });
+      };
+
+      // ASYNC AWAIT
+      const getWeatherData = async () => {          // await stop further execution of code in this function until 
+        console.log("Fetching data 1 ... ..");      // the running is complete
+        await getData(1);
+        console.log("Fetching data 2 ... ..");
+        await getData(2);
+        console.log("Fetching data 3 ... ..");
+        await getData(3);
+      };                                            // this is solution of callback hell and promise chaining
+      getWeatherData();
+
+      // PROMISE CHAINING
+    //   console.log("fetching data10...");               // this is also complicated
+    //   p2(10).then((res) => {                           // now we code through async await to make it more easier
+    //     console.log("fetching data20...");
+    //     return p2(20);
+    //   }).then((res) => {
+    //     console.log("fetching data30...");
+    //     return p2(30);
+    //   }).then((res) => {
+    //     console.log(res);
+    //   });
+
+      // CALLBACK HELL
+    //   getData(1, () => {                          // This is CALLBACK HELL - Pyramid of Doom
+    //     console.log("getting data 2 ...");        // work perfectly but seen complicated 
+    //     getData(2, () => {                        // so we use promises to avoid this
+    //       console.log("getting data 3 ...");
+    //       getData(3, () => {
+    //         console.log("getting data 4 ...");
+    //         getData(4, () => {
+    //           console.log("getting data 5 ...");
+    //           getData(5);
+    //         });
+    //       });
+    //     });
+    //   });
+
+    </script>
+  </body>
+</html>

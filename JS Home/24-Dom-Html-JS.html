@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML connect to JAVASCRIPT</title>
+    <style>
+        a{text-decoration: none;color:black;}
+    </style>
+</head>
+<body>
+    <div class="container" id="container">HELLO WORLD</div>
+    <nav class="navbar" id="navbar">
+        <ul class="nav-list">
+            <li><a href="..." class="nav-link">LINK-ONE</a></li>
+            <li><a href="..." class="nav-link">LINK-TWO</a></li>
+            <li><a href="..." class="nav-link">LINK-THREE</a></li>
+        </ul>
+    </nav>
+    <button class="btn" id="btn" name= "SetButtonName" onclick="document.getElementById('navbar').style.background = 'cyan'"
+    >CLICK</button>
+    <script>
+        let ctitle = document.getElementsByClassName("nav-link")[1]            // 1 mean having index one
+        ctitle.style.color = "red"
+
+        document.getElementById("container").style.background = "pink"         // in ID we cant give index
+
+        let links = document.querySelectorAll(".nav-link")                     //select class by using query selector
+        links[0].style.background = "grey"
+        links[1].style.background = "lightgreen"
+        links[2].style.background = "white"
+
+        document.querySelector(".navbar").style.background = "orangered"            // select one element by querySelector
+        document.getElementsByTagName("button")[0].style.color = "red"              // select element by their tagname  
+        
+        document.querySelector(".navbar").getElementsByTagName("button")[0]            // search in .navbar of  button tag
+        document.getElementsByName("SetButtonName")[0].style.background = "cyan"    // search element by their name
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Prototype Info</title>
+</head>
+<body>
+    <h2>Object Prototype Info</h2>
+    <p>Open Console</p>
+    <h2>when we create object there is inbuild prototype object which have inbuild properties & functions.</h2>
+    <h2>Array is also an object - like we use .push() method in array to add element - this is inbuild prototype function.</h2>
+
+    <script>
+
+        const student = {
+            name: "Ali",
+            email: "ali@gmail.com",
+            marks: 54,
+            hello() {                         //hello : function() {      // also write like this
+                console.log("Hello");
+            },
+            printMarks() {
+                console.log( "Marks = ", this.marks);     // student.marks (this means issi ko call kro)
+            }
+        }
+
+        console.log(student);
+        console.log(student.marks);
+        console.log(student.hello());
+        console.log(student.printMarks);
+        console.log(student.printMarks());
+
+        // when we create object there is inbuild prototype object which have inbuild properties & functions.
+        console.log("");
+
+        // console.log(student.toString());
+        console.log(student.toString);         // this is inbuild function in prototype.
+
+        let arr = ["One", "Two", "Three"];     // arr also have prototypre section
+        arr.push("Four");                      // this in inbuild function for array
+
+    </script>
+</body>
+</html>

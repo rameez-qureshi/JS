@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callbacks</title>
+  </head>
+  <body>
+    <h2>CALLBACKS</h2>
+    <h3>A callback is a function passed as an argument to another function</h3>
+    <p>Open Console</p>
+    <h2>CALLBACK HELL problem</h2>
+    <h3>Pyramid of Doom - work perfectly but seen complicated so we use promises to avoid this</h3>
+
+    <script>
+      let sum = (a, b) => {
+        console.log(a + b);
+      };
+      let calculator = (a, b, sumCallback) => {
+        sumCallback(a, b);
+      };
+      calculator(10, 2, sum);
+
+      // CALLBACK HELL
+
+      const getData = (dataid, getNextData) => {
+        // 2s
+        setTimeout(() => {
+          console.log("Data", dataid);
+          if (getNextData) {
+            getNextData();
+          }
+        }, 2000);
+      };
+
+      getData(1, () => {                          // This is CALLBACK HELL - Pyramid of Doom
+        console.log("getting data 2 ...");        // work perfectly but seen complicated 
+        getData(2, () => {                        // so we use promises to avoid this
+          console.log("getting data 3 ...");
+          getData(3, () => {
+            console.log("getting data 4 ...");
+            getData(4, () => {
+              console.log("getting data 5 ...");
+              getData(5);
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

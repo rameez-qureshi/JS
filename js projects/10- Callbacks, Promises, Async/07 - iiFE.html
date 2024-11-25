@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iiFE</title>
+</head>
+<body>
+    <h1>iiFE</h1>
+    <p>Open Console</p>
+    <h3>Immediately Invoked Function Expression</h3>
+    <h4>means if we wirte function acc to iiFE then we not need to call function</h4>
+    <h4>The function is invoked when it created.</h4>
+    <p>- SEE CODE -</p>
+    <h4>iiFE usually use in async functions</h4>
+
+    <script>
+
+        (function (){            // simple function
+            console.log("SIMPLE FUNCTION");
+        })();
+
+        (() => {                 // arrow function
+            console.log("ARROW FUNCTION");
+        })();
+
+        (async () => {           // async function
+            console.log("ASYNC FUNCTION");
+        })();
+    </script>
+    
+</body>
+</html>

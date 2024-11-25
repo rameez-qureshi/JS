@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 id="demo">Guess the number</h3>               <!-- both code working right -->
+    <h1 id="result"></h1>
+    <h4 id="demo1"></h4>
+    <script>                                                      // My own code
+      let randNum = Math.floor(Math.random() * 100);
+      let userNum;
+      while(userNum != randNum){
+        userNum = prompt("Guess the number");
+        if (userNum < randNum) {
+          alert("Enter greater");
+        }
+        else if (userNum > randNum){
+          alert("Enter lesser");
+        }
+      }
+      document.getElementById("result").innerHTML = " YOU GUESS RIGHT "
+      document.getElementById("demo1").innerHTML = "Random number was " + randNum
+    </script>
+    <!-- <script>                                                  // Harry's code
+      let randNum = Math.floor(Math.random() * 100 + 1);
+      let chances = 0;                                        // Initial vaulue of chances taken to guess a number
+      let guess;
+
+      userNum = prompt("Enter a number between 1 and 100");
+      ++chances;                                              // To increment the number of chances taken
+
+      do {
+        userNum = Number.parseInt(userNum);
+
+        if (guess > randNum) {
+          alert("Number entered is greater");
+          userNum = prompt("Enter again!!");
+          userNum = Number.parseInt(userNum);
+          ++chances;                                           // To increment the number of chances taken
+          continue;
+        } else if (guess < randNum) {
+          alert("Number entered is smaller");
+          userNum = prompt("Enter again!!");
+          userNum = Number.parseInt(userNum);
+          ++chances;                                           // To increment the number of chances taken
+          continue;
+        }
+      } while (userNum != randNum);                            //break the loop when this condition false
+
+      let score = chances;                                     //To store the score of your game
+
+      document.getElementById("demo1").innerHTML =
+        "Congratulations, The number generated was " + randNum + " and you guessed it right, Your score is " + score ;
+    </script> -->
+  </body>
+</html>

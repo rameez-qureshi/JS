@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch Error</title>
+</head>
+<body>
+    <h2>Try Catch Error</h2>
+    <h3>When any error in code js stop executing remianing code.</h3>
+    <h3>Try Catch is not stop executing remaining code.</h3>
+    <p>Open Console</p>
+
+    <script>
+        let a = 10;
+        let b = 20;
+        console.log(a);
+        console.log(b);
+        console.log(a+b);
+        console.log(a*b);
+        console.log(a+b);
+        console.log(a*b);
+        // console.log(a+c);          // error - in this js stop execute remaining code
+        try{
+            console.log(a+c);          // error
+        }catch(err){                         // err is inbuild error object
+            console.log(err);
+        }
+        console.log(a*b);
+        console.log(a+b);
+        console.log(a*b);
+    </script>
+    
+</body>
+</html>

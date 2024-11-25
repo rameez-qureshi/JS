@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="adminInput">Enter Collected Amount:</label>
+    <input type="number" id="adminInput" placeholder="">
+
+    <button id="collectedamtsubmit">Submit</button>
+
+    <script>
+        let btn = document.getElementById('collectedamtsubmit');
+        btn.addEventListener('click', function () { 
+            // Get the value from the input field
+            const name = document.getElementById('adminInput').value;
+            // Store the value in localStorage
+            localStorage.setItem('userName', name);
+            // Redirect to the second page (output.html)
+            // window.location.href = 'index.html';
+        });
+        
+    </script>
+</body>
+</html>

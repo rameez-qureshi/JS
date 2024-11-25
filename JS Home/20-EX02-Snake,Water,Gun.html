@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- gun = snake : gun
+    gun = water : water
+    snake = water : snake -->
+    <h3>SNAKE , WATER , GUN </h3>
+    <p>Enter  "s" for snake, "w" for water and "g" for gun --- RELOAD TO START</p>
+    <h1 id="demo"></h1>
+
+    <script>
+        let user = prompt("Enter s, w or g")
+        let botinput = Math.floor(Math.random()*3)
+        let bot = [ "s" , "w" , "g" ][botinput]
+
+        const game = (bot,user) => {
+            if(bot == user){
+                return "DRAW"
+            }
+            else if ( bot == "s" && user == "s"){
+                return "DRAW"
+            }
+            else if ( bot == "w" && user == "w"){
+                return "DRAW"
+            }
+            else if ( bot == "g" && user == "g"){
+                return "DRAW"
+            }
+            else if ( bot == "g" && user == "s"){
+                return "LOSS"
+            }
+            else if ( bot == "g" && user == "w"){
+                return "WIN"
+            }
+            else if ( bot == "s" && user == "w"){
+                return "LOSS"
+            }
+            else if ( bot == "s" && user == "g"){
+                return "WIN"
+            }
+            else if ( bot == "w" && user == "g"){
+                return "LOSS"
+            }
+            else if ( bot === "w" && user === "s"){
+                return "WIN"
+            }
+        }
+        let result = game(bot,user)
+        document.getElementById('demo').innerHTML = "<br> Bot = " + bot + "<br><br> Your's = " + user + "<br><br> You " + result
+        // document.write( "<br> Bot = " + bot + "<br><br> Your's = " + user + "<br><br> You " + result )
+        // alert(bot)
+    </script>
+</body>
+</html>

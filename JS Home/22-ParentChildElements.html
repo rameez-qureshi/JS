@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>ListOne</li>
+            <li>ListTwo</li>
+            <li>ListThree</li>
+        </ul>
+    </div>
+    <nav></nav>
+    <script>                        // this all can print in browser console
+        let a = document.body
+        console.log(a.firstChild)           // print first child of body i.e empty space result ( #text )
+        console.log(a.firstElementChild)    // print first element child of body means tags of html i.e div result ( div....div )
+
+        console.log(a.previousElementSibling)         // print previous element of body tag
+        console.log(a.nextElementSibling)             // print next sibling of body tag
+        console.log(a.firstElementChild)                          // print first element of body
+        console.log(a.lastElementChild)                           // print last element of body
+
+        console.log(document.body.children)           // print children of body tag
+    </script>
+</body>
+</html>

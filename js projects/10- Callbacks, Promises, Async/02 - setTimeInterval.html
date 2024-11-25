@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeInterval</title>
+  </head>
+  <body>
+    <h1>setTimeInterval</h1>
+    <h3>
+      Continues calling the function after given time until clearInterval() is
+      called.
+    </h3>
+
+    <h4>Print hello repeaat every 0.5 second - unlimited</h4>
+    <p id="demo"></p>
+
+    <h4>
+      Stop printing Hello by btn using clearInterval() method.
+    </h4>
+    <button onclick="clearHello()">Stop</button>
+    <h4>-</h4>
+
+    <h4>CLOCK is actually made from setTimeInterval().</h4>
+    <p id="demo2"></p>
+
+    <script>
+      let printHello = () => {
+        document.getElementById("demo").innerHTML += "Hello ";
+      };
+      let myInterval = setInterval(printHello, 500);
+
+      // stop printing Hello using this function
+      let clearHello = () => {
+        clearInterval(myInterval);
+      };
+      // setTimeout(clearHello, 5000);
+
+      // clock is actually made from setTimeInterval().
+      setInterval(myTimer, 1000);
+      function myTimer() {
+        const date = new Date();
+        document.getElementById("demo2").innerHTML = date.toLocaleTimeString();
+      }
+    </script>
+  </body>
+</html>

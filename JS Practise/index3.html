@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>                                    <!-- STRING METHODS -->
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let a = text.slice(7,13);
+        let b = text.substring(7,13);
+        let c = text.substr(-4);
+
+        document.getElementById('demo').innerHTML= " String = " +  text;
+        document.getElementById('demo1').innerHTML= " String slicing \"text.slice(StartIndex,EndIndex)\" method -- " + a ;
+        document.getElementById('demo2').innerHTML= " String slicing \"text.substring(StartIndex,EndIndex)\" method -- " + b;
+        document.getElementById('demo3').innerHTML= " String slicing \"text.substr( index-in-negative )\" method -- " + c;
+
+    </script>
+</body>
+</html>

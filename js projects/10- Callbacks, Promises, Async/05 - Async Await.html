@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <h1>ASYNC AWAIT</h1>
+    <p>Open Console</p>
+    <h3>Async function always return a promise</h3>
+    <h3>
+      Await pauses the execution of surrounding async function until the running promise
+      is complete.
+    </h3>
+    <h3>This is solution of callback hell and promise chaining - GO SEE CODE</h3>
+
+    <script>
+
+      const getData = (dataid) => {
+        // 2s
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Data = ", dataid);
+            resolve("success");
+          }, 2000);
+        });
+      };
+
+      const getWeatherData = async () => {          // await stop further execution of code in this function until 
+        console.log("Fetching data 1 ... ..");     // the running is complete
+        await getData(1);
+        console.log("Fetching data 2 ... ..");
+        await getData(2);
+        console.log("Fetching data 3 ... ..");
+        await getData(3);
+      };                                     // this is solution of callback hell and promise chaining
+
+      getWeatherData();
+
+    </script>
+  </body>
+</html>

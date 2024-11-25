@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor in Classes</title>
+</head>
+<body>
+    <h2>Constructor in Classes - Constructor is a method</h2>
+    <h3>while creating obj we use "new" keyword it find constructor in class - 
+        if constructor not defined it create constructor </h3>
+    <h3>Constructor is use to invoke code during object creation.</h3>
+    <p>Open Console</p>
+    <h3>When we print object it write its class - bcz obj is created by that class.</h3>
+
+    <script>
+
+        class ToyotaCar {
+            constructor(brand) {
+                console.log("Creating new ToyotaCar");
+                this.brandName = brand;
+                console.log(this.brandName);
+            };
+        };
+        let FortunerObj = new ToyotaCar("Fortuner");       // call constructor code
+        console.log(FortunerObj);
+
+        console.log("");
+
+        class SuzukiCar {
+            constructor(brand, mileage) {
+                console.log("Creating new SuzukiCar");
+                this.brandName = brand;
+                this.Carmileage = mileage;
+                console.log(this.brandName);
+            };
+        };
+        
+        let CultusObj = new SuzukiCar("Cultus", "10km");           // call constructor code
+        CultusObj.brandName = "NEW CULTUS";
+        console.log(CultusObj.brandName);
+        console.log(CultusObj);
+
+    </script>
+    
+</body>
+</html>

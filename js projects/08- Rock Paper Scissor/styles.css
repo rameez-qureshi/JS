@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainheading{
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+#btncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+.btns{
+    width: 130px;
+    height: 125px;
+    padding: 0px 5px 5px 5px;
+    border-radius: 50%;
+}
+.btns:hover{
+    background: #dddddd;
+    opacity: 0.94;
+    cursor: pointer;
+}
+.btns > img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#resultcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+#userresult{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#botresult{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#resultmsgcontainer{
+    text-align: center;
+    margin-top: 3rem;
+}
+#resultmsg{
+    background-color: rgb(195, 206, 206);
+    padding: 5px;
+}
+
+#gameinfocontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+#totalgamebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#gamedrawbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#resetbtncontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+#resetbtn{
+    background-color: rgb(163, 173, 173);
+    padding: 5px;
+    border: none;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    transition: 0.4s;
+}
+#resetbtn:hover{
+    background-color: rgb(136, 145, 145);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h2>ARRAY</h2>
+    <p>Declaring a constant array have elements changeable:</p>
+    <p id="demo"></p>
+
+    <h2>OBJECT</h2>
+    <p>Declaring a constant object have objects properties changeable:</p>
+    <p id="demo1"></p>
+
+    <script>
+
+      // A R R A Y
+      const cars = ["Saab", "Volvo", "BMW"];                // Create an Array
+
+      cars[0] = "Toyota" ;                                  // Change an element of index 0
+
+      cars.push("Audi") ;                                   // Add an element in last
+
+      document.getElementById("demo").innerHTML = cars ;    // Display the Array
+
+      // O B J E C T
+      const car = { type: "Fiat", model: "500", color: "white" } ;                 // Create an object
+      
+      car.color = "red" ;                                                          // Change a property
+      
+      car.owner = "Johnson" ;                                                      // Add a property
+
+      document.getElementById("demo1").innerHTML = "Car owner is " + car.color ;   // Display the property
+    </script>
+  </body>
+</html>

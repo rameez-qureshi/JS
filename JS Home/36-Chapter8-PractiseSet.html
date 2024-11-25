@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter8-PractiseSet</title>
+    <style>
+        .bs{background: linear-gradient(black,darkgray);display: flex;justify-content: center;color: white;}
+        .bulb{background: linear-gradient(darkgray,black);}
+    </style>
+</head>
+<body>
+    <!-- PROBLEM : 01 -->
+    <button onclick="alert('A')">A</button>
+    <button onclick="alert('B')">B</button>
+    <button onclick="alert('C')">C</button>
+
+    <!-- PROBLEM : 02 -->
+    <h1>Bookmarks</h1>
+    <button id="google">Google</button>
+    <a href="https://fb.com"> <button id="fb">Facebook</button></a>
+    <a href="https://twitter.com"> <button id="twitter">Twitter</button></a>
+
+    <!-- PROBLEM : 05 -->
+    <div id="bulb" class="bs bulb"><h1>BULB</h1></div>
+
+    <script>
+        // PROBLEM : 03
+        document.getElementById("google").addEventListener("click", function() { 
+        window.location = "https://www.google.com";
+        win.focus();
+        })
+
+        // PROBLEM : 05
+        setInterval(async function() {
+        document.querySelector("#bulb").classList.toggle("bulb")
+        }, 2000)
+    </script>
+</body>
+</html>

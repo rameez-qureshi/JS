@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Html Classes</title>
+</head>
+<body>
+    <div class="container" id="first">HEEEEELLLLOOO WOORLRLDD</div>
+
+    <script>
+        //let first = document.getElementById('first')
+
+        // we also call tag by id name but this is not good
+        first.className = "Hello bye"                       // change classes of html
+        console.log(first.classList)                        // show all classes in console
+
+        first.classList.add("red")              // add class
+        first.classList.remove("red")           // remove class
+        first.classList.contains("red")         // True or False - class present or not
+        first.classList.toggle("red")           // if class present remove it - if class not present then add
+    </script>
+</body>
+</html>
